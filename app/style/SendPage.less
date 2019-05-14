@@ -1,0 +1,331 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.send-select-account-area {
+  margin-bottom: 20px;
+}
+
+.send-select-account-input {
+  margin-right: 1em;
+  display: inline-block;
+  vertical-align: middle;
+
+  .accounts-select {
+    width: 300px;
+    margin-right: 20px;
+  }
+}
+
+.send-select-account-area .accounts-button-icon {
+  vertical-align: middle;
+  margin-top: 0px;
+}
+
+.send-send-all-input {
+  float: right;
+}
+
+.send-amount-area {
+  margin-bottom: 10px;
+}
+
+.send-row {
+  height: 40px;
+}
+
+.send-label {
+  .inline-block-mixin;
+
+  vertical-align: top;
+  font-size: 19px;
+  line-height: 24px;
+  width: 46px;
+  text-align: right;
+}
+
+.send-address {
+  .inline-block-mixin;
+
+  font-size: 13px;
+  line-height: 17px;
+
+  .accounts-select {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 2em;
+  }
+}
+
+.send-address.send-output-address {
+  width: 33%;
+}
+
+.send-address-wallet-icon {
+  .inline-block-mixin;
+
+  vertical-align: top;
+  width: 20px;
+  height: 19px;
+  background-image: @add-icon;
+  background-position: 50% 50%;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  // margin-top: -1em;
+}
+
+.send-all-wallet-icon {
+  .inline-block-mixin;
+
+  width: 24px;
+  height: 24px;
+  background-image: @send-all-default;
+  background-position: 50% 50%;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.send-all-wallet-icon:hover {
+  background-image: @send-all-hover;
+}
+
+.send-all-cancel-wallet-icon {
+  .inline-block-mixin;
+
+  width: 24px;
+  height: 24px;
+  background-image: @indicator-invalid-icon;
+  background-position: 50% 50%;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.send-self-wallet-icon {
+  .inline-block-mixin;
+
+  width: 24px;
+  height: 24px;
+  background-image: @send-self-default;
+  background-position: 50% 50%;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.send-self-wallet-icon:hover {
+  background-image: @send-self-hover;
+}
+
+.send-others-wallet-icon {
+  .inline-block-mixin;
+
+  width: 24px;
+  height: 24px;
+  background-image: @send-to-others-icon;
+  background-position: 50% 50%;
+  background-size: 19px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.send-to-others-wallet-icon:hover,
+.send-address-wallet-icon:hover {
+  opacity: 0.85;
+}
+
+.send-amount {
+  .inline-block-mixin;
+
+  vertical-align: top;
+  margin-top: -2px;
+  float: right;
+}
+
+.send-amount-label {
+  .inline-block-mixin;
+
+  font-size: 20px;
+  min-width: 3.5em;
+  margin-top: -1px;
+}
+
+.send-address-amount-sum-and-currency {
+  .inline-block-mixin;
+
+  color: var(--input-color-default);
+  height: 19px;
+  padding-top: 4px;
+  width: 150px;
+}
+
+.send-address-amount-sum-gradient {
+  .inline-block-mixin;
+
+  background-color: var(--background-back-color);
+  font-family: Inconsolata, monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.send-address-input-amount {
+  .inline-block-mixin;
+
+  border-style: none;
+  border-bottom: 1px solid;
+  color: var(--input-color-default);
+  text-align: right;
+  cursor: text;
+}
+
+.send-address-input-amount[hidden] {
+  display: none;
+}
+
+.send-address-icon-spacer {
+  .inline-block-mixin;
+
+  width: 20px;
+  height: 20px;
+}
+
+.send-address-amount-spacer {
+  margin-right: 90px;
+}
+
+.send-address-delete-icon {
+  .inline-block-mixin;
+
+  width: 20px;
+  height: 20px;
+  background-image: @delete-icon;
+  background-position: 50% 50%;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.send-address-delete-icon:hover {
+  opacity: 0.7;
+}
+
+.send-button-area {
+  margin-top: 1em;
+}
+
+.content-send {
+  .inline-block-mixin;
+
+  vertical-align: top;
+}
+
+.estimation-area-send {
+  .inline-block-mixin;
+
+  text-align: right;
+  float: right;
+}
+
+.total-amount-send {
+  font-size: 11px;
+  color: var(--disabled-color);
+  line-height: 14px;
+  margin-bottom: 0.3em;
+}
+
+.total-amount-send-text {
+  .inline-block-mixin;
+
+  width: 20vw;
+}
+
+.total-amount-send-amount {
+  .inline-block-mixin;
+
+  color: var(--input-color-default);
+  width: 14vw;
+  font-family: Inconsolata, monospace;
+
+  .balance-base {
+    color: var(--disabled-color);
+  }
+}
+
+.total-amount-send-amount-bytes {
+  color: var(--disabled-color);
+}
+
+.send-address-hash-to {
+  width: 100%;
+}
+
+.send-select-account {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  color: var(--input-color-default);
+  font-size: 19px;
+}
+
+.send-select-account:hover {
+  height: auto;
+}
+
+.send-input-form {
+  .inline-block-mixin;
+
+  width: 286px;
+  font-size: 13px;
+  line-height: 17px;
+  margin-right: 34px;
+}
+
+.send-address-amount-sum {
+  border-style: none;
+  font-family: Inconsolata, monospace;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.send-flex-height {
+  padding: 14px 10px 0px 40px;
+  background-color: var(--background-back-color);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.output-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.unsigned-raw-tx-title {
+  color: var(--title-text-and-button-background);
+  font-size: 14pt;
+  padding-bottom: 10px;
+}
+
+.unsigned-raw-tx-area {
+  word-wrap: break-word;
+  width: 600px;
+  height: 110px;
+  background: var(--background-back-color);
+  margin-top: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  display: table;
+}
+
+.unsigned-raw-tx {
+  float: left;
+  width: 550px;
+}
+
+.unsigned-raw-tx-copy-to-clipboard-icon {
+  float: right;
+  margin-left: 20px;
+  margin-top: 10px;
+}

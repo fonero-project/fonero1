@@ -1,0 +1,263 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.settings-wrapper {
+  display: flex;
+  background: var(--background-back-color);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 26px 26px 26px 40px;
+  justify-content: space-between;
+}
+
+.settings-columns,
+.get-started-custom-privacy-settings {
+  flex: 50%;
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:disabled + label,
+  input[type="radio"]:disabled + label {
+    display: inline-block;
+    background-color: var(--disabled-background-color);
+    border: 1px solid var(--disabled-color);
+  }
+  
+  input[type="checkbox"]:checked:disabled + label,
+  input[type="radio"]:checked:disabled + label {
+    display: inline-block;
+    border: 1px solid var(--disabled-color);
+    background-color: var(--disabled-background-color);
+    background-image: @checkmarkGrey;
+    background-repeat: no-repeat;
+    background-size: 10px;
+  }
+  
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    display: inline-block;
+    border: 1px solid var(--disabled-color);
+    background-color: none;
+  }
+  
+  input[type="checkbox"]:checked + label,
+  input[type="radio"]:checked + label {
+    display: inline-block;
+    border: 1px solid var(--input-color);
+    background-color: none;
+    background-image: @checkmarkBlue;
+    background-repeat: no-repeat;
+    background-size: 10px;
+  }
+  
+  input[type="radio"] + label {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    background-position: 2px;
+  }
+  
+  input[type="checkbox"] + label {
+    width: 12px;
+    height: 12px;
+    background-position: 1px;
+  }
+}
+
+.settings-wrapper .settings-label {
+  width: 200px;
+}
+
+.settings-column-title {
+  font-size: 19px;
+  text-transform: capitalize;
+  margin-bottom: 14px;
+  line-height: 24px;
+}
+
+.settings-privacy,
+.settings-security,
+.settings-timezone {
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.settings-privacy .settings-column-title,
+.settings-security .settings-column-title,
+.settings-timezone .settings-column-title {
+  text-align: right;
+  margin-right: 145px;
+}
+
+.settings-restart {
+  font-weight: bold;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.settings-row-checklist {
+  flex-wrap: wrap;
+}
+
+.settings-checklist-description {
+  font-style: italic;
+  text-align: right;
+  margin: -16px 28px 10px 0px;
+  color: var(--disabled-color);
+  font-size: 11px;
+  line-height: 15px;
+  width: 175px;
+}
+
+.settings-label {
+  .inline-block-mixin;
+
+  text-align: right;
+  margin: -1px 10px 20px 0;
+  width: 125px;
+}
+
+.change-password-default-icon {
+  background: @change-password-default-icon no-repeat center;
+  background-color: var(--input-color);
+  background-size: 16px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.13);
+}
+
+.change-password-disabled-icon,
+.change-password-loading {
+  background: @password-inactive-icon no-repeat center;
+  background-color: var(--disabled-background-color);
+  cursor: default;
+}
+
+.change-password-disabled-icon:hover,
+.change-password-loading:hover {
+  background-color: var(--disabled-background-color) !important;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.13) !important;
+}
+
+.change-password-default-icon:hover {
+  background-color: var(--input-color-hover);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+.settings-input {
+  .inline-block-mixin;
+
+  width: 200px;
+}
+
+.settings-text-input {
+  width: 194px;
+  height: 23px;
+  padding: 0px 4px 1px 10px;
+}
+
+.settings-input-error {
+  width: 290px;
+  float: right;
+  height: 100%;
+  text-align: left;
+  color: var(--error-red);
+  padding-top: 5px;
+}
+
+.settings-action-buttons {
+  margin-top: 1em;
+}
+
+.settings-save-button {
+  .inline-block-mixin;
+}
+
+.settings-close-wallet-button {
+  .inline-block-mixin;
+
+  float: right;
+}
+
+.settings-update-passphrase-button {
+  float: right;
+}
+
+.settings-update-passphrase-button span {
+  float: left;
+  margin-top: 1px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.get-started-content-new-seed .settings-general {
+  max-width: 400px;
+}
+
+.privacy-checkbox {
+  margin-top: 2px;
+}
+
+
+@media screen and (max-width: 676px) {
+  .app-modal.about-modal,
+  .app-modal-reduced-bar.about-modal,
+  .app-modal-standalone.about-modal {
+    margin-left: 9px;
+  }
+}
+
+@media screen and (max-width: 1106px) {
+  .settings-wrapper {
+    display: inherit;
+    margin-top: -50px;
+    height: 680px;
+  }
+
+  .app-modal.about-modal,
+  .app-modal-reduced-bar.about-modal,
+  .app-modal-standalone.about-modal {
+    margin-top: 30px;
+  }
+
+  .settings-privacy .settings-column-title,
+  .settings-security .settings-column-title {
+    text-align: left;
+  }
+}
+
+.close-modal-button {
+  height: 23px;
+  background-color: #8997a5;
+  color: #f3f6f6;
+  background-image: @close-wallet-icon;
+  background-repeat: no-repeat;
+  background-size: 13px;
+  width: 134px;
+  background-position: 10px 8px;
+  border-radius: 10px;
+  padding: 0;
+  padding-top: 6px;
+}
+
+.toggle-theme-button-wrapper {
+  margin-top: 30px;
+  float: right;
+}
+
+.privacy-buttons {
+  text-align: right;
+}

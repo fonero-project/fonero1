@@ -1,0 +1,224 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.sidebar-mainnet {
+  background-color: var(--background-container);
+}
+
+.sidebar-testnet {
+  background-color: var(--background-container);
+}
+
+.hamburger {
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-image: @menu-hamburger;
+  cursor: pointer;
+}
+
+.hamburger:hover {
+  opacity: 0.7;
+}
+
+.sidebar-reduce-arrow {
+  height: 20px;
+  width: 20px;
+  background-repeat: no-repeat;
+  background-image: @menu-arrow;
+  cursor: pointer;
+  margin-left: 85px;
+}
+
+.sidebar-reduce-arrow:hover {
+  opacity: 0.7;
+}
+
+.sidebar-menu {
+  width: @sidebar-width;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  transition: width 100ms cubic-bezier(0.86, 0, 0.07, 1);
+  box-shadow: 5px 0 21px rgba(9, 20, 64, 0.21);
+}
+
+.sidebar-menu-reduced {
+  width: @sidebar-width-reduced;
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+  transition: width 100ms cubic-bezier(0.86, 0, 0.07, 1);
+  box-shadow: 5px 0 21px rgba(9, 20, 64, 0.21);
+}
+
+.sidebar-logo,
+.reduced-sidebar-logo, {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  padding: 20px 18px 20px 18px;
+  border-bottom: 1px solid var(--white-border);
+}
+
+.reduced-sidebar-logo {
+  flex-direction: column;
+}
+
+.sidebar-main {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-scroll {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+}
+
+.sidebar-menu-total-balance-extended {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--background-container-opaque);
+  transition: all 100ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.sidebar-menu-total-balance-extended-bottom {
+  padding-right: 18px;
+  padding-left: 18px;
+}
+
+.sidebar-menu-total-balance-extended-bottom-account {
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-menu-total-balance-extended-bottom-account-name {
+  color: var(--stroke-color-hovered);
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sidebar-menu-total-balance-extended-bottom-account-number {
+  font-family: Inconsolata, monospace;
+  color: var(--input-color-default);
+  font-size: 15px;
+}
+
+.sidebar-menu-bottom-total-balance-short {
+  position: relative;
+  height: 56px;
+  padding: 14px 16px 0px 16px;
+  cursor: pointer;
+}
+
+.sidebar-menu-bottom-total-balance-short-separator {
+  height: 7px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--input-color-default);
+  background-image: @menu-arrow-up;
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+}
+
+.sidebar-menu-bottom-total-balance-short-name {
+  float: left;
+  color: var(--disabled-color);
+  font-size: 13px;
+  text-align: left;
+  text-decoration: none;
+  padding-left: 20px;
+  margin-left: 4px;
+  background-image: @sidebar-balance-icon;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.sidebar-menu-bottom-total-balance-short-value {
+  float: right;
+  font-family: Inconsolata, monospace;
+  color: var(--input-color-default);
+  font-size: 13px;
+  text-align: right;
+}
+
+.sidebar-menu-bottom-latest-block {
+  position: relative;
+  height: 30px;
+  padding-top: 14px;
+  padding-right: 18px;
+  padding-left: 20px;
+  background-color: var(--background-back-color);
+  font-size: 13px;
+}
+
+.sidebar-menu-bottom-latest-block-name {
+  color: var(--disabled-color);
+  font-size: 13px;
+  line-height: 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.sidebar-menu-bottom-latest-block-number {
+  font-family: Inconsolata, monospace;
+  color: var(--title-text-and-button-background);
+}
+
+.sidebar-menu-bottom-latest-block-time {
+  float: right;
+  color: var(--disabled-color);
+  font-size: 13px;
+  text-align: right;
+  text-decoration: none;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--input-color-default);
+}
+
+.sidebar-testnet .sidebar-scroll::-webkit-scrollbar {
+  background-color: var(--disabled-background-color);
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--disabled-color);
+}
+
+.sidebar-watch-only-icon {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-image: @watch-only-icon;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar-menu-link-notification-icon {
+  background-repeat: no-repeat;
+  background-image: @bell-notification-icon;
+  background-position: center;
+  background-size: 10px;
+  width: 14px;
+  height: 14px;
+  margin-left: 34px;
+  margin-top: 10px;
+  position: absolute;
+  display: inline-block;
+  z-index: 10;
+  border-radius: 50%;
+  background-color: var(--stroke-color-focused);
+}

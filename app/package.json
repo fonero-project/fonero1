@@ -1,0 +1,27 @@
+{
+  "name": "fonero",
+  "productName": "Fonero",
+  "version": "1.4.0",
+  "description": "Cross-platform fonero gui based on Electron and React",
+  "main": "./main.js",
+  "author": {
+    "name": "Fonero Team",
+    "email": "info@fonero.org",
+    "url": "https://github.com/fonero-project"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "blake-hash": "^1.1.0",
+    "bs58check": "^2.1.1",
+    "electron-store": "1.2.0",
+    "fs-extra": "^5.0.0",
+    "grpc": "1.16.0",
+    "minimist": "^1.2.0"
+  },
+  "resolutions": {
+    "conf": "1.1.2"
+  },
+  "optionalDependencies": {
+    "win32ipc": "./modules/win32ipc"
+  }
+}

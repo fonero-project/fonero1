@@ -1,0 +1,809 @@
+@import (reference) "./main.less";
+@import (reference) "./Layout.less";
+@import (reference) "./Icons.less";
+
+.advanced-page-form {
+  width: 100%;
+  float: left;
+}
+
+.advanced-page-form.toggle {
+  padding-top: 25px;
+}
+
+.advanced-daemon-network {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.advanced-daemon-row {
+  float: left;
+  width: 75%;
+  height: 44px;
+  margin-bottom: 10px;
+}
+
+.advanced-daemon-label {
+  float: left;
+  width: 150px;
+  text-align: right;
+}
+
+.advanced-daemon-input {
+  padding-left: 20px;
+  float: left;
+  width: 295px;
+}
+
+.advanced-daemon-long-input {
+  padding-left: 20px;
+  float: left;
+  width: 450px;
+}
+
+.page-body.getstarted {
+  padding: 40px;
+  display: block;
+  background-color: var(--background-container);
+  background-repeat: no-repeat;
+  background-image: @launcher-logo;
+  background-size: 173px;
+  background-position: 40px 40px;
+  z-index: 3;
+  height: 100%;
+}
+
+.getstarted {
+  color: var(--title-text-and-button-background);
+}
+
+.getstarted.loader.logs {
+  margin-left: 42px;
+  margin-top: 138px;
+
+  .loader-settings-logs {
+    position: fixed;
+    right: 55px;
+    top: 60px;
+    user-select: none;
+  }
+
+  .active {
+    color: var(--input-color);
+  }
+
+  .log-container {
+    margin-top: 10px;
+    max-height: 600px;
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .settings-privacy {
+    width: 50%;
+    float: right;
+    margin-right: 40px;
+  }
+}
+
+.getstarted.loader {
+  margin-top: 138px;
+  margin-left: 60px;
+
+  .tutorial-button {
+    background-color: var(--title-text-and-button-background);
+  }
+
+  .tutorial-button:hover {
+    background-color: var(--title-text-and-button-background-hovered);
+  }
+
+  .content-title {
+    font-size: 27px;
+    line-height: 34px;
+    margin-bottom: 13px;
+    float: left;
+    width: 100%;
+  }
+
+  .loader-bar-buttons {
+    position: fixed;
+    right: 41px;
+    top: 425px;
+    user-select: none;
+
+    > .button:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .loader-settings-logs {
+    position: fixed;
+    right: 55px;
+    top: 60px;
+    user-select: none;
+  }
+
+  .loader-buttons {
+    float: left;
+    margin-bottom: 90px;
+    width: 100%;
+  }
+
+  .loader-bar {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .loader-bar-icon {
+    position: absolute;
+    right: 37px;
+    top: 286px;
+
+    .loader-bar-icon-text {
+      float: left;
+      margin-top: 14px;
+      margin-right: 20px;
+    }
+
+    .new-logo-animation {
+      float: right;
+      margin: 0;
+      height: 50px;
+      width: 50px;
+      background-size: 50px;
+    }
+  }
+
+  .loader-bar-estimation {
+    float: left;
+    font-size: 9px;
+
+    .normal {
+      opacity: 0.5465;
+    }
+
+    .bold {
+      opacity: 1;
+    }
+  }
+
+  .go-back-screen-button-area {
+    position: fixed;
+    right: 55px;
+    top: 190px;
+  }
+
+  .go-back-screen-button {
+    height: 12px;
+    width: 12px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-image: @x-grey;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .go-back-screen-button:hover {
+    opacity: 0.7;
+  }
+
+  .linear-progress.small {
+    float: left;
+  }
+}
+
+.loader-bar-bottom {
+  float: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  .loader-bar-estimation {
+    float: left;
+    font-size: 11px;
+    margin-left: 82px;
+  }
+}
+
+.getstarted.content {
+  margin-top: 55px;
+  margin-left: 280px;
+
+  .content-title {
+    font-size: 27px;
+    line-height: 34px;
+    margin-bottom: 42px;
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .content-text {
+    font-size: 13px;
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .column {
+      float: left;
+      width: 300px;
+      margin-right: 32px;
+    }
+  }
+
+  .seedWord {
+    user-select: none;
+    width: 100px;
+    height: 23px;
+    background-color: var(--title-text-and-button-background);
+    border-radius: 3px;
+    color: var(--background-back-color);
+    margin: 5px;
+    float: left;
+    text-align: center;
+  }
+
+  .seedWord.error {
+    background-color: transparent;
+
+    .Select-control {
+      border: 1px solid var(--error-text-color);
+      color: var(--title-text-and-button-background);
+    }
+
+    .Select-control:hover,
+    .Select-control:focus {
+      border: 1px solid var(--eror-text-color);
+    }
+  }
+
+  .seedWord.populated {
+    background-color: transparent;
+
+    .Select-control {
+      border: 1px solid var(--title-text-and-button-background);
+      color: var(--title-text-and-button-background);
+    }
+
+    .Select-control:hover,
+    .Select-control:focus {
+      border: 1px solid var(--disabled-color);
+    }
+  }
+
+  .seedWord.restore, {
+    background-color: transparent;
+
+    .Select-control {
+      border: 1px solid var(--white-border);
+      color: var(--title-text-and-button-background);
+    }
+
+    .Select-control:hover,
+    .Select-control:focus {
+      color: var(--input-color-default);
+      border: 1px solid var(--disabled-color);
+    }
+  }
+
+  .toolbar {
+    width: 100%;
+    float: left;
+  }
+
+  .wallet-key-blue-button:not(.key-blue-button-disabled) {
+    float: left;
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.21);
+  }
+
+  .wallet-key-blue-button:hover {
+    box-shadow: none;
+  }
+
+  .copy {
+    float: left;
+    padding-top: 2px;
+    padding-left: 33px;
+    height: 21px;
+    color: var(--input-color);
+    border: 1px solid var(--input-color);
+    border-radius: 3px;
+    width: 177px;
+    margin: 4px;
+    font-size: 13px;
+    background-image: @copy-to-clipboard-icon;
+    background-position: 16px 3px;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .copy:hover {
+    opacity: 0.8;
+  }
+
+  .go-back-screen-button-area {
+    position: fixed;
+    left: 971px;
+  }
+
+  .go-back-screen-button {
+    height: 12px;
+    width: 12px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-image: @x-grey;
+    opacity: 1;
+  }
+
+  .go-back-screen-button:hover {
+    opacity: 0.7;
+  }
+}
+
+.release-notes {
+  display: flex;
+  clear: both;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 65vh;
+  overflow-y: scroll;
+  padding-right: 1em;
+
+  .release-notes-text {
+    font-size: 13px;
+    font-family: Helvetica, sans-serif;
+    max-width: 410px;
+  }
+
+  .release-notes-image {
+    width: 590px;
+    height: 295px;
+    margin-top: 14px;
+    background-repeat: no-repeat;
+    background-size: 590px;
+
+    &.release-image-v130 { background-image: @release-image-v130; }
+    &.release-image-v140 { background-image: @release-image-v140; }
+  }
+}
+
+.release-notes-version-navigation {
+  font-size: 13px;
+
+  > a {
+    margin-right: 30px;
+    cursor: pointer;
+    color: var(--title-text-and-button-background);
+    text-decoration: none;
+  }
+}
+
+.whatsnew {
+  font-size: 13px;
+  margin-left: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.whatsnew:hover {
+  opacity: 0.7;
+}
+
+.display-wallet {
+  color: transparent;
+  margin: 5px 10px 5px 0px;
+  float: left;
+  height: 161px;
+  width: 168px;
+  border-radius: 5px;
+  border: 1px solid var(--background-container);
+  background: linear-gradient(225deg, var(--white-border), var(--display-wallet-gradient-right));
+  font-size: 15px;
+  cursor: pointer;
+
+  .wallet-icon {
+    margin-left: 54px;
+    height: 62px;
+    width: 62px;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    background-position: 8px 10px;
+  }
+
+  .wallet-icon.wallet {
+    background-image: @wallet-gray-icon;
+  }
+
+  .wallet-icon.selected {
+    background-image: @wallet-blue-icon;
+  }
+
+  .wallet-icon.createnew {
+    margin-top: 25px;
+    background-size: 58px 58px;
+    background-position: 0px 5px;
+    background-image: @createnewwallet;
+  }
+
+  .wallet-icon.restore {
+    margin-top: 25px;
+    background-size: 58px 58px;
+    background-position: 0px 5px;
+    background-image: @restorewallet;
+  }
+}
+
+.display-wallet:hover {
+  color: var(--background-back-color);
+}
+
+.display-wallet.new {
+  background: none;
+  background-color: var(--background-back-color);
+
+  .display-wallet-name {
+    color: var(--title-text-and-button-background);
+    margin-top: 20px;
+  }
+}
+
+.display-wallet-buttons {
+  text-align: center;
+  margin-top: 5px;
+  margin-right: 10px;
+  float: right;
+}
+
+.display-wallet-button {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 50% 50%;
+  box-shadow: 0px 3px 8px var(--title-text-and-button-background-drop-shadow);
+}
+
+.display-wallet-button:hover {
+  box-shadow: 0px 1px 3px var(--title-text-and-button-background-drop-shadow);
+}
+
+.display-wallet-button.remove {
+  background-color: var(--title-text-and-button-background);
+  background-image: @launcher-wallet-delete;
+}
+
+.display-wallet-button.remove:hover {
+  background-image: @launcher-wallet-delete-hover;
+}
+
+.display-wallet:hover:not(.selected) {
+  border: 1px solid var(--disabled-color);
+}
+
+.display-wallet.selected {
+  background: linear-gradient(45deg, var(--input-color), var(--display-wallet-gradient-selected-right));
+  box-shadow: 0px 5px 21px var(--title-text-and-button-background-drop-shadow);
+  border: 1px solid var(--input-color);
+}
+
+.display-wallet-complete {
+  color: var(--title-text-and-button-background);
+  margin-top: 5px;
+  min-height: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.display-wallet-name {
+  color: var(--input-color-default);
+  text-align: center;
+}
+
+.display-wallet-last-access {
+  height: 11px;
+  color: var(--button-text);
+  text-align: center;
+  font-size: 11px;
+}
+
+.display-wallet-cancel-changes {
+  float: left;
+  margin-top: 7px;
+  margin-left: 39px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 131ms @easeInOutQuart;
+}
+
+.display-wallet-launch {
+  color: var(--white-button-text);
+  float: left;
+  margin-top: 7px;
+  margin-left: 39px;
+  margin-right: 3px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 131ms @easeInOutQuart;
+}
+
+.display-wallet-cancel-changes:hover,
+.display-wallet-launch:hover {
+  border-bottom: 1px solid var(--background-back-color);
+}
+
+@keyframes bounce {
+  0% {
+    margin-left: 0px;
+  }
+
+  50% {
+    margin-left: 2px;
+  }
+
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.launch-arrow-bounce {
+  color: var(--white-button-text);
+  float: left;
+  margin-top: 6px;
+  animation: bounce 1s @easeInOutQuart infinite;
+}
+
+.display-wallet-last-access.selected,
+.display-wallet-complete.selected {
+  color: var(--input-color-default);
+}
+
+.edit-wallets-button {
+  margin: 5px;
+  float: left;
+  height: 36px;
+  width: 36px;
+  border-radius: 5px;
+  background-color: var(--background-back-color);
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: 50% 50%;
+  background-image: @launcher-edit-wallets;
+  cursor: pointer;
+}
+
+.edit-wallets-button:hover {
+  background-image: @launcher-edit-wallets-hover;
+}
+
+.edit-wallets-button.close {
+  background-color: var(--disabled-color);
+  background-size: 12px 12px;
+  background-image: @x-white;
+}
+
+.new-wallet-title-area {
+  float: left;
+  width: 100%;
+  margin-left: 22px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+}
+
+.new-wallet-title {
+  float: left;
+  font-size: 15px;
+  line-height: 19px;
+  margin-top: 3px;
+}
+
+.wallet-icon-small {
+  float: left;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-right: 10px;
+}
+
+.wallet-icon-small.createnew {
+  background-image: @createnewwallet;
+}
+
+.wallet-icon-small.restore {
+  background-image: @restorewallet;
+}
+
+.get-started-custom-privacy-settings {
+  width: 300px;
+}
+
+.privacy-options {
+  display: flex;
+  justify-content: center;
+  margin-left: 35px;
+  padding-right: 2em;
+}
+
+.privacy-option {
+  width: 296px;
+  height: 342px;
+  border-radius: 5px;
+  margin-right: 20px;
+  padding: 1px;
+  background-color: var(--background-back-color);
+  color: var(--title-text-and-button-background);
+  cursor: pointer;
+}
+
+.privacy-option:hover {
+  padding: 0;
+  border: 1px solid var(--input-color);
+
+  .privacy-option-title {
+    color: var(--input-color);
+  }
+}
+
+.privacy-option-title {
+  font-size: 15px;
+  line-height: 19px;
+  margin-left: 30px;
+  margin-bottom: 8px;
+}
+
+.privacy-option-description {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 13px;
+  line-height: 17px;
+}
+
+.privacy-option-icon {
+  margin: 30px 73px 20px 73px;
+  background-repeat: no-repeat;
+  background-size: 150px;
+  width: 150px;
+  height: 150px;
+}
+
+.privacy-option-icon.standard {
+  background-image: @stakey-privacy-standard;
+}
+
+.privacy-option-icon.disabled {
+  background-image: @stakey-privacy-disabled;
+}
+
+.privacy-option-icon.custom {
+  background-image: @stakey-privacy-custom;
+}
+
+.privacy-option-icon.enable-spv {
+  background-image: @enable-spv;
+}
+
+.privacy-option-icon.disable-spv {
+  background-image: @disable-spv;
+}
+.get-started-last-log-lines {
+  font-size: 9px;
+}
+
+.getstarted-stakepool-add-row {
+  float: left;
+  width: 100%;
+
+  .getstarted-stakepool-add-col {
+    padding-top: 1em;
+
+    &.left {
+      padding-right: 1em;
+    }
+
+    &.right {
+      float: left;
+      width: 27%;
+      margin-left: 100px;
+      background-color: var(--disabled-background-color);
+      padding: 2em;
+    }
+
+    .field {
+      display: grid;
+      min-height: 2em;
+      grid-template-columns: 30% 87%;
+      margin-bottom: 2em;
+
+      .label {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.getstarted-stakepool-add-buttons {
+  float: left;
+}
+
+@media screen and (max-width: 676px) {
+  .loader-settings-logs {
+    position: fixed;
+    top: 100px;
+  }
+
+  .getstarted.loader .loader-bar {
+    margin-left: -30px;
+  }
+
+  .linear-progress-text {
+    position: relative;
+  }
+
+  .display-wallet .wallet-icon {
+    position: relative;
+  }
+
+  // .display-wallet-name {
+  // }
+
+  .getstarted.loader {
+    margin-left: 0px;
+  }
+
+  .page-body.getstarted {
+    background-position: 80px 20px;
+    background-color: var(--background-container) !important;
+    z-index: 5;
+  }
+
+  .getstarted.loader .loader-settings-logs {
+    background-color: var(--background-container);
+  }
+
+  .display-wallet.new {
+    background-color: inherit;
+    margin-top: 60px;
+  }
+
+  .display-wallet.new .display-wallet-name {
+    margin-top: 0px;
+  }
+
+  .display-wallet-launch {
+    color: indigo;
+  }
+
+  .getstarted.loader.logs .settings-privacy {
+    float: inherit;
+  }
+
+  .advanced-daemon-row {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .display-wallet .wallet-icon.restore {
+    margin-top: -69px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .whatsnew {
+    display: none;
+  }
+}
+
+.getstarted-trezor-config-sections {
+  margin-top: 14em;
+}

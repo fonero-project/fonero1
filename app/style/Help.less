@@ -1,0 +1,136 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.help-icons-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 42px;
+}
+
+.help-icon {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  height: 90px;
+  width: 320px;
+  background-color: var(--background-back-color);
+  background-size: 35px;
+  background-position: 23px 28px;
+  background-repeat: no-repeat;
+  color: var(--input-color-default);
+  cursor: pointer;
+}
+
+.help-icon-text {
+  float: left;
+  margin-left: 70px;
+  margin-top: 24px;
+}
+
+.help-icon-title {
+  font-size: 19px;
+  line-height: 24px;
+  color: var(--input-color-default);
+}
+
+.help-icon-subtitle {
+  font-size: 13px;
+  line-height: 17px;
+  color: var(--disabled-color);
+}
+
+.help-icon-link-expand {
+  float: right;
+  height: 16px;
+  width: 16px;
+  margin-top: 37px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 0px;
+  background-image: @help-expand-default;
+}
+
+.help-icon:hover .help-icon-link-expand {
+  background-image: @help-expand-hover;
+}
+
+.help-icon-link-external {
+  float: right;
+  height: 16px;
+  width: 16px;
+  margin-top: 37px;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 0px;
+  background-image: @help-external-default;
+}
+
+.help-icon:hover .help-icon-link-external {
+  background-image: @help-external-hover;
+}
+
+.help-star-icon {
+  background-image: @help-star;
+}
+
+.help-blockchain-explorer-icon {
+  background-image: @help-blockchain-explorer;
+}
+
+.help-slack-icon {
+  background-image: @help-slack;
+}
+
+.help-forum-icon {
+  background-image: @help-forum;
+}
+
+.help-docs-icon {
+  background-image: @help-docs;
+}
+
+.help-freenode-icon {
+  background-image: @help-freenode;
+}
+
+.help-github-icon {
+  background-image: @help-github;
+}
+
+.help-stakepools-icon {
+  background-image: @help-stakepools;
+}
+
+.help-constitution-icon {
+  background-image: @help-constitution;
+}
+
+.help-matrix-icon {
+  background-image: @help-matrix;
+}
+
+.help-rocketchat-icon {
+  background-image: @help-rocketchat;
+}
+
+.help-telegram-icon {
+  background-image: @help-telegram;
+}
+
+.help-expand-icon {
+  background-image: @help-expand-default;
+}
+
+.help-expand-icon-hover {
+  background-image: @help-expand-hover;
+}
+
+.help-external-icon {
+  background-image: @help-external-default;
+}
+
+.help-external-icon-hover {
+  background-image: @help-external-hover;
+}

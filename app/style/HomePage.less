@@ -1,0 +1,213 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.overview-header {
+  padding: 56px 30px 10px 72px;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-back-color);
+}
+
+.overview-balance {
+  font-size: 42px;
+  color: var(--input-color-default);
+  font-family: @font-family-monospaced;
+}
+
+.overview-balance-label {
+  font-family: @font-family-regular;
+  font-size: 11px;
+  color: var(--stroke-color-hovered);
+}
+
+.overview-balance-unit {
+  font-size: 17px;
+  color: var(--input-color-default);
+}
+
+.overview-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-back-color);
+}
+
+.overview-spendable-locked-wrapper {
+  width: 300px;
+  margin-left: 72px;
+  margin-top: 117px;
+}
+
+.overview-ticket-column {
+  float: left;
+  width: 48%;
+  margin-right: 43px;
+}
+
+.overview-ticket-column-right {
+  float: left;
+  width: 35%;
+}
+
+.overview-transactions-ticket-wrapper {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0px;
+  top: 364px;
+  bottom: 0px;
+  left: 0px;
+  padding: 16px 60px 30px 60px;
+  background-color: var(--background-container);
+  display: flex;
+  flex-direction: row;
+}
+
+.overview-spendable-locked-wrapper-area {
+  margin-bottom: 14px;
+  &.tickets {
+    margin-bottom: 8px;
+  }
+}
+
+.overview-spendable-locked-wrapper-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.overview-balance-spendable-locked {
+  font-size: 17px;
+  color: var(--input-color-default);
+  font-family: @font-family-monospaced;
+  line-height: 18px;
+  padding-left: 10px;
+  margin-right: 2px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 7px;
+
+  &.active {
+    background-image: @legend-active;
+  }
+  
+  &.voted {
+    background-image: @legend-voted;
+  }
+  
+  &.received {
+    background-image: @legend-received;
+  }
+
+  &.sent {
+    background-image: @legend-sent;
+  }
+
+  &.available {
+    background-image: @legend-available;
+  }
+
+  &.locked {
+    background-image: @legend-locked;
+  }
+}
+
+.overview-balance-spendable-locked-top-label {
+  font-size: 11px;
+  color: var(--input-color-default);
+}
+
+.overview-balance-spendable-locked-unit {
+  font-size: 11px;
+  color: var(--input-color-default);
+  font-family: @font-family-monospaced;
+  line-height: 1;
+}
+
+.overview-balance-spendable-locked-text {
+  font-size: 11px;
+  color: var(--stroke-color-hovered);
+  font-family: @font-family-regular;
+  line-height: 13px;
+  padding-top: 3px;
+  margin-left: 10px;
+  &.back {
+    margin-left: 2px;
+  }
+}
+
+.overview-balance-spendable-locked-label {
+  font-size: 11px;
+  color: var(--stroke-color-hovered);
+  font-family: @font-family-regular;
+  line-height: 13px;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.recent-transactions {
+  margin-right: 41px;
+  margin-top: 27px;
+  width: 50%;
+}
+
+.home-content-title {
+  border-bottom: 1px solid transparent;
+  color: var(--stroke-color-hovered);
+  font-size: 13px;
+  font-family: @font-family-regular;
+  margin: 0px 0px 8px 16px;
+}
+
+.home-content-link {
+  margin-right: 5px;
+  color: var(--disabled-color);
+  font-size: 9px;
+  font-family: @font-family-regular;
+  cursor: pointer;
+  float: right;
+}
+
+.home-content-link > a:hover {
+  color: var(--input-color-default);
+}
+
+.overview-no-transactions > a,
+.overview-no-tickets > a {
+  display: block;
+  background-color: var(--background-back-color);
+  padding: 20px 20px 20px 48px;
+  background-repeat: no-repeat;
+  background-position: 16px 20px;
+  background-size: 20px;
+  text-decoration: none;
+  color: var(--input-color-default);
+  margin-bottom: 1px;
+  cursor: pointer;
+}
+
+.overview-no-transactions > a.receive {
+  background-image: @generate-addr-icon;
+}
+
+.overview-no-transactions > a.buy {
+  background-image: @buy-fonero-icon;
+}
+
+.overview-no-tickets > a.purchaseTickets {
+  background-image: @dummy-icon;
+}
+
+.overview-no-tickets > a.whatIsStaking {
+  background-image: @what-is-staking-icon;
+}
+
+.overview-no-tickets > a.ticketLifeCycle {
+  background-image: @ticket-lifecycle-icon;
+}
+
+@media screen and (max-width: 676px) {
+  .overview-spendable-locked-wrapper {
+    width: 0px;
+    margin-left: 22px;
+    margin-top: 0px;
+  }
+}

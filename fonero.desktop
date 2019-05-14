@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Fonero
+Comment=Cross-platform GUI for Fonero.
+Exec=fonero %U
+Terminal=false
+Type=Application
+Icon=fonero
+MimeType=x-scheme-handler/fonero;
+Categories=Office;Finance;

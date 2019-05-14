@@ -1,0 +1,150 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.advanced-page-toggle.security-page {
+  float: none;
+  position: absolute;
+  margin-left: 20px;
+}
+
+.security-page-form {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.button-right {
+  position: absolute;
+  top: 45px;
+  right: 70px;
+}
+
+.security-center-form {
+  background-color: var(--background-back-color);
+  margin-bottom: 20px;
+  padding: 46px 0 0 40px;
+  float: left;
+  width: 95%;
+}
+
+.security-center-form-row {
+  height: 50px;
+  width: 100%;
+}
+
+.security-center-form-row-label,
+.validate-address-form-label {
+  float: left;
+  text-align: right;
+  padding-right: 10px;
+  width: 86px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.security-center-form-row-field {
+  float: left;
+  width: 340px;
+  height: 36px;
+}
+
+.security-center-form-row-field-message {
+  float: left;
+  width: 540px;
+}
+
+.validate-address-form {
+  float: left;
+  width: 95%;
+  padding: 26px 0 26px 40px;
+  background-color: var(--background-back-color);
+}
+
+.validate-address-form-address {
+  float: left;
+  width: 340px;
+}
+
+.validate-address-form-address-response {
+  float: right;
+  margin-right: 40px;
+  font-size: 11px;
+  line-height: 14px;
+  border-radius: 3px;
+  padding: 3px 10px;
+}
+
+.validate-address-form-address-response.invalid {
+  color: var(--error-text-color);
+  border: 1px solid var(--error-text-color);
+}
+
+.validate-address-form-address-response.owned {
+  color: var(--input-color);
+  border: 1px solid var(--input-color);
+}
+
+.validate-address-form-address-response.not-owned {
+  color: var(--vote-yes-color);
+  border: 1px solid var(--vote-yes-color);
+}
+
+.security-center-message-result {
+  padding: 2.5em 1em;
+  border-radius: 5px;
+  font-family: @font-family-regular;
+  font-size: 23px;
+  font-weight: 700;
+  display: flex;
+  margin-top: 1em;
+  text-align: center;
+  border: 1px solid;
+
+  &.sign {
+    border-color: var(--input-color);
+  }
+
+  &.verify-invalid {
+    border-color: var(--error-text-color);
+    color: var(--error-text-color);
+  }
+
+  &.verify-valid {
+    border-color: var(--vote-yes-color);
+    color: var(--vote-yes-color);
+  }
+
+  .message-signature {
+    word-break: break-all;
+  }
+
+  .message-content-nest-copy-to-clipboard-icon {
+    width: 20px;
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .button-right {
+    top: 25px;
+  }
+
+  .security-center-form-row-field-message {
+    width: 90%;
+  }
+
+  .security-center-form-row-field {
+    width: 90%;
+  }
+
+  .validate-address-form-address {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 409px) {
+  .security-center-form {
+    padding: 86px 0px 0 40px;
+  }
+}

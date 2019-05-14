@@ -1,0 +1,276 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.tickets-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 42px;
+}
+
+.tickets-buttons-area {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.ticket-card {
+  width: 265px;
+  padding-left: 62px;
+  padding-bottom: 5px;
+  background-color: var(--background-back-color);
+  background-repeat: no-repeat;
+  background-size: 31px 43px;
+  background-position: 20px 26px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-right: 20px;
+  overflow: hidden;
+  transition: all 125ms ease-in-out;
+  cursor: pointer;
+}
+
+.ticket-card.is-expanded {
+  height: 100%;
+}
+
+.ticket-overview-header {
+  font-family: @font-family-monospaced;
+  font-weight: bold;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 26px 0px 4px 0px;
+}
+
+.ticket-overview-count {
+  color: var(--disabled-color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.ticket-info-price {
+  margin: 28px 0px 0px 0px;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.ticket-reward {
+  .inline-block-mixin;
+
+  color: var(--disabled-color);
+  border-right: 1px solid var(--input-color-disabled);
+  padding-right: 0.5em;
+  padding-left: 15px;
+  background-image: @ticket-reward-icon;
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: 0px 5px;
+}
+
+.ticket-info-card-return-balance {
+  display: inline-block;
+}
+
+.ticket-timestamp {
+  .inline-block-mixin;
+
+  color: var(--disabled-color);
+  font-family: @font-family-monospaced;
+  border-right: 1px solid var(--input-color-disabled);
+  padding-right: 0.5em;
+}
+
+.ticket-days-to-vote {
+  .inline-block-mixin;
+
+  color: var(--disabled-color);
+  font-family: @font-family-monospaced;
+  background-image: @time-lock-icon;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: 0px 4px;
+  padding-left: 15px;
+}
+
+.ticket-info-expanded-indicator {
+  background-repeat: no-repeat;
+  background-image: @agenda-card-kebab-disabled;
+  float: right;
+  width: 10px;
+  background-size: 10px;
+  height: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.ticket-card.ticket-info-card.is-expanded .ticket-info-expanded-indicator {
+  background-image: @indicator-invalid-icon;
+}
+
+.ticket-expanded-info {
+  margin: 15px 0px 0px -40px;
+  padding-bottom: 1em;
+}
+
+.ticket-info-label {
+  .inline-block-mixin;
+
+  width: 5em;
+  text-align: right;
+}
+
+.ticket-transaction-hash {
+  .inline-block-mixin;
+
+  margin-left: 0.5em;
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket-list-back-btn {
+  float: right;
+  margin-right: 20px;
+}
+
+.vote-choice {
+  padding: 4px;
+  background-color: rgba(105, 211, 245, 0.3);
+}
+
+.vote-choice-agenda-id {
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.ticket-card.ticket-expired {
+  background-image: @ticket-expired-icon;
+}
+
+.ticket-card.ticket-immature {
+  background-image: @ticket-immature-icon;
+}
+
+.ticket-card.ticket-live {
+  background-image: @ticket-live-icon;
+}
+
+.ticket-card.ticket-missed {
+  background-image: @ticket-missed-icon;
+}
+
+.ticket-card.ticket-revoked {
+  background-image: @ticket-revoked-icon;
+}
+
+.ticket-card.ticket-unmined {
+  background-image: @ticket-unmined-icon;
+}
+
+.ticket-card.ticket-voted {
+  background-image: @ticket-voted-icon;
+}
+
+.my-tickets-charts {
+  background: var(--background-back-color);
+  padding: 30px 0px 30px 0px;
+  min-height: 230px;
+  width: 100%;
+  display: flex;
+
+  .new-logo-animation {
+    margin-left: 42%;
+    margin-top: 40px;
+  }
+}
+
+.my-tickets-stats-links {
+  float: right;
+}
+
+.my-tickets-stats-links a {
+  float: left;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+  background-color: var(--background-container);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.16);
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.my-tickets-stats-links a.vote-time {
+  background-image: @vote-time-stats-icon;
+}
+
+.my-tickets-stats-links a.my-tickets-active-chart-link.vote-time {
+  background-image: @vote-time-stats-active-icon;
+}
+
+.my-tickets-stats-links a.stakepool {
+  background-image: @stakepool-stats-icon;
+}
+
+.my-tickets-stats-links a.my-tickets-active-chart-link.stakepool {
+  background-image: @stakepool-stats-active-icon;
+}
+
+.my-tickets-stats-links a.stakerewards {
+  background-image: @stakerewards-stats-icon;
+}
+
+.my-tickets-stats-links a.my-tickets-active-chart-link.stakerewards {
+  background-image: @stakerewards-stats-active-icon;
+}
+
+.my-tickets-stats-links a.my-tickets-active-chart-link {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+  background-color: var(--disabled-background-color);
+  cursor: default;
+}
+
+.my-tickets-stats-links a:hover {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+  background-color: var(--disabled-background-color);
+}
+
+.my-tickets-stats-chart {
+  float: left;
+}
+
+.my-tickets-stats-indicators {
+  float: left;
+  width: 250px;
+  margin: 0px 40px 0px 42px;
+  color: var(--input-color-default);
+}
+
+.my-tickets-stats-indicators-row {
+  float: left;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+.my-tickets-stats-indicators-label {
+  text-align: left;
+  float: left;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.my-tickets-stats-indicators-title {
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.my-tickets-stats-indicators-value {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  float: right;
+  text-align: right;
+}

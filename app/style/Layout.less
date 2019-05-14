@@ -1,0 +1,371 @@
+// Classes for laying out the pages
+
+@import (reference) "./main.less";
+
+.getstarted-page-body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.page-body {
+  display: flex;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-view {
+  height: 100%;
+  width: calc(100% - @sidebar-width);
+  position: absolute;
+  right: 0px;
+  background-color: var(--background-container);
+  overflow-x: hidden;
+}
+
+.page-view-reduced-bar {
+  height: 100%;
+  width: calc(100% - @sidebar-width-reduced);
+  position: absolute;
+  right: 0px;
+  background-color: var(--background-container);
+  overflow-x: hidden;
+}
+
+.page-view.blur,
+.page-view-reduced-bar.blur,
+.getstarted-page-body.blur,
+.pseudo-modal-wrapper.blur, {
+  filter: blur(5px);
+}
+
+// Base definition for the "page client area" (area where main content is
+// displayed")
+.page-content-mixin {
+  position: relative;
+  padding: 54px 60px 0px 80px;
+  background-color: var(--background-container);
+  overflow-y: scroll;
+  height: calc(100% - 214px);
+}
+
+// Main content that allows scrolling
+.page-content {
+  .page-content-mixin;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+// Main content that *does not* allow scrolling
+.page-content-fixed {
+  overflow: visible;
+}
+
+// Main content that has been blured by something positioned on top of it
+.page-content-blur {
+  .page-content-mixin;
+
+  filter: blur(6px);
+}
+
+.tab-content:not(.visible)::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+.tab-content:not(.visible)::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.standalone-page {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.tabbed-page-header,
+.standalone-page-header {
+  background-color: var(--background-back-color);
+  padding: 43px 60px 0px 63px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  height: 120px;
+}
+
+.tabbed-page-body {
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 163px;
+  bottom: 0px;
+  left: 0px;
+  background-color: var(--background-container);
+}
+
+.standalone-page-body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0px;
+  top: 163px;
+  bottom: 0px;
+  left: 0px;
+  padding: 60px 60px 30px 60px;
+  background-color: var(--background-container);
+}
+
+.tabbed-page-header > .title-header-title,
+.standalone-page-header > .title-header-title {
+  margin-bottom: 3px;
+  color: var(--stroke-color-hovered);
+  font-size: 27px;
+  line-height: 34px;
+  float: left;
+}
+
+.tabbed-page-header > .title-header-icon,
+.standalone-page-header > .title-header-icon {
+  float: left;
+  margin-right: 10px;
+  margin-top: 1px;
+}
+
+.tabbed-page-header > .title-header-button,
+.standalone-page-header > .title-header-button {
+  position: absolute;
+  right: 80px;
+}
+
+.tabbed-page-header > .description-header,
+.standalone-page-header > .description-header {
+  white-space: pre-wrap;
+  color: var(--input-color-default);
+  font-size: 13px;
+  float: left;
+  width: 100%;
+  margin-left: 42px;
+}
+
+.description-header > .description-header-action-button {
+  position: absolute;
+  right: 80px;
+}
+
+.description-header > .description-header-action-button > .button {
+  min-width: 76px;
+}
+
+.tabbed-page-body.governance .tabbed-page-header > .tabs {
+  left: unset;
+  padding-left: 100px;
+  margin-left: -63px;
+  width: 100%;
+  background-color: var(--disabled-background-color-lighter);
+  > .tab {
+    margin-right: 20px;
+    > a {
+      padding: 3px 10px 3px 10px;
+      border-radius: 5px;
+      &.active {
+        background-color: var(--background-back-color);
+      }
+    }
+  }
+}
+
+.tabbed-page-header > .tabs {
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+}
+
+.tabbed-page-header > .tabs > .tab {
+  line-height: 35px;
+  margin-right: 55px;
+}
+
+.tabbed-page-header > .tabs > .tabs-caret > {
+  position: absolute;
+  bottom: 0px;
+  height: 5px;
+}
+
+.tabbed-page-header > .tabs > .tabs-caret > .active {
+  background-color: var(--accent-color);
+  position: absolute;
+  height: 5px;
+}
+
+.tabbed-page-body.governance>.tab-content {
+  height: 100%;
+}
+
+.tabbed-page .tab-content {
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 38px 80px 30px 63px;
+  background-color: var(--background-container);
+}
+
+.tabbed-page-subtitle {
+  color: var(--stroke-color-hovered);
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 17px;
+  margin-left: 42px;
+}
+
+.tabbed-page-subtitle.export {
+  margin-top: -20px;
+}
+
+.component-tab-content {
+  position: absolute;
+  width: 100%;
+}
+
+.invalid-rpc-info {
+  white-space: pre-line;
+  margin-bottom: 1em;
+}
+
+.top-level-container,
+.top-level-container > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.shutdown-page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.scrollbar-overlay {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 20px;
+  background-color: var(--background-container);
+}
+
+.fatal-error-page {
+  margin: 138px 50px 0px 50px;
+}
+
+.fatal-error-area {
+  margin: 10px 10% 10px 10%;
+  padding: 10px;
+  border: 1px solid var(--title-text-and-button-background);
+  border-radius: 3px;
+}
+
+.fatal-error-toolbar {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.fatal-error-title {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.fatal-error-suggestion {
+  font-size: 13px;
+  margin: 10px 10% 10px 10%;
+  padding: 10px;
+  border: 1px solid var(--title-text-and-button-background);
+  border-radius: 3px;
+  float: left;
+}
+
+.fatal-error {
+  font-family: @font-family-monospaced;
+  font-size: 13px;
+}
+
+.fatal-remove-button {
+  float: left;
+}
+
+.fatal-error-reset-blockchain {
+  float: left;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 511px) {
+  .fatal-error {
+    width: 220px;
+    margin-left: -100px;
+  }
+
+  .fatal-error-area {
+    border: 0px solid var(--title-text-and-button-background);
+  }
+
+  .fatal-error-title {
+    margin-left: -66px;
+  }
+
+  .fatal-error-suggestion {
+    margin-left: -95px;
+    border: 0px solid var(--background-back-color);
+  }
+
+  .fatal-error-reset-blockchain {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .page-view {
+    position: inherit;
+  }
+
+  .tabbed-page .tab-content {
+    padding: 5px 5px -1px 5px;
+  }
+
+  .tabbed-page-body {
+    left: 43px;
+  }
+
+  .tabbed-page-header,
+  .standalone-page-header {
+    top: -20px;
+  }
+
+  .tabbed-page-header > .tabs {
+    position: inherit;
+    width: 4px;
+  }
+
+  .tabbed-page-header > .tabs > .tabs-caret > .active {
+    background-color: inherit;
+  }
+
+  .fatal-error-page {
+    margin: 64px 50px 0px 50px;
+  }
+}
+
+@media screen and (max-width: 299px) {
+  .fatal-error-suggestion {
+    height: 473px;
+  }
+}

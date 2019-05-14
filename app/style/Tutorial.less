@@ -1,0 +1,217 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+/** GetStarted tutorial classes **/
+.getstarted-tutorial {
+  display: flex;
+
+  .tutorial-side {
+    width: 47%;
+    height: 100vh;
+
+    video {
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+
+  .tutorial-main {
+    width: 46%;
+    height: 100vh;
+    padding: 22.8vh 40px 0px;
+    overflow-y: auto;
+  }
+
+  .tutorial-main-toolbar {
+    display: flex;
+
+    .next-button {
+      margin-right: 52px;
+      margin-top: 5px;
+      height: 16px;
+      padding: 5px 20px 6px 20px;
+    }
+
+    .skip-button {
+      margin-left: 10px;
+      margin-top: 8px;
+      height: 16px;
+      padding: 5px 20px 6px 20px;
+    }
+  }
+
+  .tutorial-main-text {
+    color: var(--title-text-and-button-background);
+    font-size: 13px;
+    column-count: 2;
+    margin-bottom: 2em;
+    min-height: 33em;
+    line-height: 19px;
+
+    h1 {
+      color: var(--input-color-default);
+      font-size: 35px;
+      line-height: 35px;
+      column-span: all;
+      font-weight: 400;
+      -webkit-margin-before: 0px;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    p {
+      break-inside: avoid-column;
+    }
+
+    ul {
+      margin: 0em 2em 2em -3.1em;
+    }
+  }
+
+  @media (max-height: 700px) {
+    .tutorial-main {
+      padding-top: 10vh;
+      height: 89vh;
+    }
+  }
+
+  @media (max-height: 460px) {
+    .tutorial-main-toolbar {
+      height: 80px;
+    }
+  }
+}
+
+/** Wallet Tutorial Classes */
+.wallet-tutorial {
+  background-color: var(--background-back-color);
+  padding: 60px;
+  color: var(--title-text-and-button-background);
+
+  .tutorial-title {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+
+  .tutorial-subtitle {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .tutorial-close-button {
+    height: 12px;
+    width: 12px;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-image: @x-grey;
+    float: right;
+  }
+
+  .tutorial-standard-page {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .tutorial-text {
+    width: 40%;
+    margin-right: 30px;
+    white-space: pre-line;
+  }
+
+  .tutorial-page-indicator a {
+    cursor: pointer;
+  }
+
+  .tutorial-image-and-indicator {
+    text-align: center;
+    height: 35vw;
+    width: 35vw;
+  }
+
+  .tutorial-image {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tutorial-image-lifecycle-01 {
+    background-image: @lifecycle-01;
+  }
+
+  .tutorial-image-lifecycle-02 {
+    background-image: @lifecycle-02;
+  }
+
+  .tutorial-image-lifecycle-03 {
+    background-image: @lifecycle-03;
+  }
+
+  .tutorial-image-lifecycle-04 {
+    background-image: @lifecycle-04;
+  }
+
+  .tutorial-image-lifecycle-05 {
+    background-image: @lifecycle-05;
+  }
+
+  .tutorial-image-lifecycle-06 {
+    background-image: @lifecycle-06;
+  }
+
+  .tutorial-image-staking-01 {
+    background-image: @staking-01;
+  }
+}
+
+@media screen and (max-width: 916px) {
+  .getstarted-tutorial .tutorial-main {
+    top: 88px;
+    left: 21px;
+  }
+
+  .getstarted-tutorial .tutorial-side.step-0 {
+    display: none;
+  }
+
+  .getstarted-tutorial .tutorial-side.step-1 {
+    display: none;
+  }
+
+  .getstarted-tutorial .tutorial-side.step-2 {
+    display: none;
+  }
+
+  .getstarted-tutorial .tutorial-side.step-3 {
+    display: none;
+  }
+
+  .getstarted-tutorial .tutorial-side.step-4 {
+    display: none;
+  }
+
+  .getstarted-tutorial .tutorial-side.step-5 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 541px) {
+  .tutorial-main {
+    top: 8px;
+  }
+}
+
+@media screen and (max-width: 493px) {
+  .getstarted-tutorial .tutorial-main-toolbar {
+    position: fixed;
+    bottom: 18px;
+  }
+
+  .getstarted-tutorial .tutorial-main {
+    top: 25px;
+  }
+}

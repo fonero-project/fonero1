@@ -1,0 +1,905 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.accounts-button-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: @accounts-button-icon;
+  background-position: 50%;
+  background-size: 12px auto;
+  background-repeat: no-repeat;
+  box-shadow: 0 3px 8px var(--input-color-shadow);
+  border-radius: 5px;
+  background-color: var(--input-color);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.accounts-button-icon:hover {
+  box-shadow: 0 1px 3px var(--input-color-shadow);
+  background-color: var(--account-button-hover);
+}
+
+.clipboard-box {
+  position: relative;
+  display: inline-block;
+}
+
+.copy-to-clipboard-icon {
+  display: inline-block;
+  width: 20px;
+  height: 18px;
+  background-image: @copy-to-clipboard-icon;
+  background-position: 0 0;
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.copy-to-clipboard-icon:hover {
+  opacity: 0.8;
+}
+
+.copy-to-clipboard-success {
+  font-size: 12px;
+  color: var(--background-back-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 2px 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -4px);
+  min-width: 4em;
+  text-align: center;
+}
+
+.copy-to-clipboard-success.hidden {
+  display: none;
+}
+
+.key-blue-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 30px 14px 30px;
+  border-radius: 5px;
+  background-color: var(--input-color);
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.21);
+  color: var(--white-button-text);
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 100ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  user-select: none;
+}
+
+.key-blue-button:hover {
+  background-color: var(--input-color-hover);
+}
+
+.key-blue-button:active {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+  background-color: var(--input-color-hover);
+}
+
+.key-blue-button-disabled,
+.key-blue-button[disabled],
+.danger-button-disabled,
+.danger-button[disabled] {
+  cursor: default;
+  display: inline-block;
+  padding: 12px 30px 14px 30px;
+  border-radius: 5px;
+  background-color: var(--disabled-background-color);
+  box-shadow: none;
+  color: var(--disabled-color);
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  user-select: none;
+}
+
+.slate-gray-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 30px 14px 30px;
+  border-radius: 5px;
+  background-color: var(--title-text-and-button-background);
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.21);
+  color: var(--background-container);
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 100ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  user-select: none;
+}
+
+.slate-gray-button:hover {
+  background-color: var(--stroke-color-hovered);
+}
+
+.thin-button {
+  padding: 5px 20px 5px 20px;
+}
+
+.invisible-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 30px 14px 30px;
+  border-radius: 5px;
+  color: var(--disabled-color);
+  background-color: inherit;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 100ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  user-select: none;
+}
+
+.invisible-button:hover {
+  color: var(--stroke-color-hovered);
+}
+
+.update-available-button {
+  color: var(--input-color);
+  text-decoration: underline;
+  user-select: none;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+}
+
+.update-available-button:hover {
+  color: var(--input-color-hover);
+}
+
+.danger-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 30px 14px 30px;
+  border-radius: 5px;
+  background-color: var(--error-red);
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.21);
+  color: var(--background-back-color);
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 100ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  user-select: none;
+}
+
+.danger-button:hover {
+  background-color: var(--error-red-hover);
+}
+
+.close-button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 12px 30px 14px 30px;
+  border-radius: 5px;
+  background-color: var(--title-text-and-button-background);
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.21);
+  color: var(--stroke-color-default);
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 100ms cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  user-select: none;
+}
+
+.close-button:hover {
+  background-color: var(--title-text-and-button-background-hovered);
+}
+
+.manage-pools-button {
+  float: left;
+  background-color: var(--input-color);
+  background-image: @manage-pools-icon;
+  background-position: 50% 50%;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  outline: 0;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  border-radius: 5px;
+  box-shadow: 0 5px 13px rgba(0, 0, 0, 0.21);
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.manage-pools-button:hover {
+  background-color: var(--input-color-hover);
+}
+
+.manage-pools-button:active {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.menu-link {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  cursor: pointer;
+  height: 52px;
+  padding-left: 65px;
+  color: var(--disabled-color);
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.13s ease-in-out;
+  background-position: 20px 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  user-select: none;
+}
+
+.menu-link:hover,
+.menu-link-active {
+  color: var(--input-color-default);
+}
+
+.menu-link.settingsIcon {
+  background-image: @menu-settings-default;
+}
+
+.menu-link-active.settingsIcon {
+  background-image: @menu-settings-active;
+  cursor: default;
+}
+
+.menu-link.settingsIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-settings;
+}
+
+.menu-link.helpIcon {
+  background-image: @menu-help-default;
+}
+
+.menu-link-active.helpIcon {
+  background-image: @menu-help-active;
+  cursor: default;
+}
+
+.menu-link.helpIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-help;
+}
+
+.menu-link.ticketsIcon {
+  background-image: @menu-tickets-default;
+}
+
+.menu-link-active.ticketsIcon {
+  background-image: @menu-tickets-active;
+  cursor: default;
+}
+
+.menu-link.ticketsIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-tickets;
+}
+
+.menu-link.transactionsIcon {
+  background-image: @menu-transactions-default;
+}
+
+.menu-link-active.transactionsIcon {
+  background-image: @menu-transactions-active;
+  cursor: default;
+}
+
+.menu-link.transactionsIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-transactions;
+}
+
+.menu-link.accountsIcon {
+  background-image: @menu-accounts-default;
+}
+
+.menu-link-active.accountsIcon {
+  background-image: @menu-accounts-active;
+  cursor: default;
+}
+
+.menu-link.accountsIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-accounts;
+  background-size: 22px;
+  background-position: 19px 50%;
+}
+
+.menu-link.securitycntrIcon {
+  background-image: @menu-securitycntr-default;
+}
+
+.menu-link-active.securitycntrIcon {
+  background-image: @menu-securitycntr-active;
+  cursor: default;
+}
+
+.menu-link.securitycntrIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-security;
+}
+
+.menu-link.overviewIcon {
+  background-image: @menu-overview-default;
+}
+
+.menu-link-active.overviewIcon {
+  background-image: @menu-overview-active;
+  cursor: default;
+}
+
+.menu-link.overviewIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-overview;
+}
+
+.menu-link.governanceIcon {
+  background-image: @menu-governance-default;
+}
+
+.menu-link-active.governanceIcon {
+  background-image: @menu-governance-active;
+  cursor: default;
+}
+
+.menu-link.governanceIcon:not(.menu-link-active):hover {
+  background-image: @menu-animation-governance;
+}
+
+.menu-link-active.menu-link.trezorIcon {
+  background-image: @menu-trezor-active;
+}
+
+.menu-link.trezorIcon:not(.menu-link-active):hover {
+  background-image: @menu-trezor-hover;
+}
+
+.menu-link.trezorIcon {
+  background-image: @menu-trezor-default;
+}
+
+.menu-caret {
+  position: absolute;
+  height: 52px;
+  width: 100%;
+  border-left: 5px solid var(--accent-color);
+}
+
+.sidebar-mainnet .menu-caret {
+  background-color: var(--background-back-color);
+}
+
+.sidebar-testnet .menu-caret {
+  background-color: var(--background-back-color);
+}
+
+.info-field-modal-button {
+  float: right;
+  border-radius: 0px;
+  background-image: @menu-help-active;
+  background-position: 50% 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.info-modal-button {
+  border-radius: 0px;
+  background-image: @tickets-info-icon;
+  background-position: 50% 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  outline: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 3px;
+  background-color: transparent;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.info-modal-button:hover {
+  opacity: 0.7;
+}
+
+.path-input-and-button {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px var(--stroke-color-default) solid;
+}
+
+.path-input-area {
+  width: 100%;
+  margin-right: 15px;
+}
+
+.path-button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: @search-icon;
+  background-size: 16px 16px;
+}
+
+.path-button:hover {
+  opacity: 0.7;
+}
+
+.path-input {
+  border-style: none;
+  cursor: text;
+  background: transparent;
+  outline: none;
+  border: none !important;
+  align-items: center;
+  font-family: @font-family-regular;
+  font-size: 13px;
+  padding: 3px 4px 1px 10px;
+  display: flex;
+  flex: auto;
+  flex-grow: 1;
+}
+
+.path-input:hover {
+  opacity: 0.7;
+}
+
+.ticket-cogs-opened,
+.ticket-cogs-closed {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0px;
+  background-position: 50% 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  color: var(--background-back-color);
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ticket-cogs-opened {
+  background-image: @tickets-cogs-opened-icon;
+}
+
+.ticket-cogs-closed {
+  background-image: @tickets-cogs-closed-icon;
+}
+
+.ticket-cogs-opened:hover,
+.ticket-cogs-closed:hover {
+  opacity: 0.7;
+}
+
+.rescan-progress-area {
+  color: var(--disabled-color);
+  font-size: 13px;
+}
+
+.rescan-progress-percent {
+  color: var(--input-color-default);
+}
+
+.rescan-progress-fraction {
+  color: var(--input-color-default);
+  margin: 0px 4px 0px 4px;
+}
+
+.rescan-progress-indicator {
+  margin: -14px 0px 10px -20px;
+  width: @sidebar-width;
+
+  .linear-progress.small {
+    border-radius: 0px;
+    background-color: var(--input-color-hover);
+  }
+
+  .linear-progress.small .linear-progress-bar {
+    background: var(--accent-color);
+    border-radius: 0px;
+  }
+}
+
+.rescan-button-area {
+  padding-top: 2px;
+  padding-right: 10px;
+  float: left;
+}
+
+.rescan-button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: @menu-rescan-icon;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.rescan-button:not(.spin):hover {
+  opacity: 0.7;
+  background-image: @menu-rescan-hover-icon;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rescan-button.spin {
+  animation: spin 1s linear infinite;
+}
+
+.rescan-button.spin:hover {
+  opacity: 1;
+}
+
+.rescan-cancel-button-area {
+  padding-top: 2px;
+  float: right;
+}
+
+.gettickets-cancel-button,
+.rescan-cancel-button {
+  width: 16px;
+  height: 16px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  background-image: @menu-cancel-rescan-icon;
+  background-size: 16px 16px;
+  cursor: pointer;
+}
+
+.gettickets-cancel-button:hover,
+.rescan-cancel-button:hover {
+  opacity: 0.7;
+}
+
+.transaction-link {
+  cursor: pointer;
+  color: var(--link-color);
+}
+
+.transaction-link:hover {
+  color: var(--link-hover-color);
+}
+
+[data-pseudo-content]::before,
+[data-pseudo-content--before]::before,
+[data-pseudo-content--after]::after {
+  content: attr(data-pseudo-content);
+}
+
+.inline-field {
+  display: flex;
+  margin-bottom: 1.5em;
+}
+
+.inline-field-field {
+  flex-grow: 1;
+  padding-left: 0.5em;
+}
+
+.tabs > .tab {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabs > .tab > a {
+  margin: 0px 5px 0px 5px;
+  color: var(--tab-text);
+  text-decoration: none;
+}
+
+.tabs > .tab > a:hover,
+.tabs > .tab > a.active {
+  color: var(--tab-text-active-hover);
+}
+
+.overview-header {
+  .tabs > .tab > a {
+    margin: 0px 8px 0px 0px;
+    font-size: 11px;
+    padding: 5px 10px 5px 10px;
+  }
+
+  .tabs > .tab > a.active {
+    border: 1px solid var(--tab-text-active-hover);
+    border-radius: 3px;
+    padding: 5px 9px 5px 9px;
+  }
+}
+
+.no-transactions-indicator,
+.no-tickets-indicator,
+.no-stats-indicator {
+  text-align: center;
+  color: var(--title-text-and-button-background);
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: center 30px;
+}
+
+.no-transactions-indicator {
+  color: var(--title-text-and-button-background);
+}
+
+.no-transactions-indicator-img {
+  background-image: @no-tx-icon;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: center 30px;
+}
+
+.no-tickets-indicator {
+  background-image: @no-tickets-icon;
+}
+
+.no-stats-indicator {
+  background-image: @stats-disabled-icon;
+}
+
+.vertical-expand {
+  background-image: @arrow-right-gray-icon;
+  background-repeat: no-repeat;
+  background-size: 20px 10px;
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  transform: rotate(90deg);
+  transition: all 0.5s;
+}
+
+.vertical-expand.expanded {
+  transform: rotate(270deg);
+}
+
+.step-indicator {
+  display: inline-flex;
+
+  .step.current {
+    margin: 12px;
+    height: 14px;
+    width: 14px;
+    border: 2px solid var(--white-border);
+    border-radius: 10px;
+  }
+
+  .step.checked {
+    margin: 16px;
+    height: 10px;
+    width: 10px;
+    background-image: @onboarding-checkcircle;
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+  }
+
+  .step.unchecked {
+    margin: 16px;
+    height: 10px;
+    width: 10px;
+    background-color: var(--white-border);
+    border-radius: 10px;
+  }
+}
+
+.doc-unavailable-alert {
+  opacity: 0.3;
+  font-size: 75%;
+}
+
+.agenda-options-radio-label {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.agenda-options-radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: var(--background-back-color);
+  border-radius: 50%;
+  border: 1px solid var(--white-border);
+  padding: 1px;
+}
+
+.agenda-options-radio-label:hover input ~ .checkmark {
+  opacity: 0.8;
+  border: 2px solid var(--input-color);
+  padding: 0;
+}
+
+.agenda-options-radio-label input:checked ~ .checkmark {
+  border: 2px solid var(--input-color);
+  padding: 0;
+}
+
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.agenda-options-radio-label input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.agenda-options-radio-label .checkmark::after {
+  top: 3px;
+  left: 3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--input-color);
+}
+
+@media screen and (max-width: 511px) {
+  .key-blue-button {
+    margin-top: -40px;
+    padding: 4px 30px 4px 30px;
+  }
+
+  .danger-button {
+    margin-left: 145px;
+    margin-top: 18px;
+  }
+}
+
+@media screen and (max-width: 409px) {
+  .danger-button {
+    margin-left: 55px;
+    width: 122px;
+  }
+}
+
+@media screen and (max-width: 299px) {
+  .danger-button {
+    margin-left: 55px;
+    width: 122px;
+  }
+
+  .key-blue-button {
+    position: absolute;
+    bottom: 18px;
+  }
+}
+// .vertical-accordion {
+// }
+.vertical-accordion-header {
+  cursor: pointer;
+  position: relative;
+}
+
+.vertical-accordion-arrow {
+  content: "";
+  background-image: @arrow-right-gray-icon;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: contain;
+  width: 10px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transition: transform 0.25s ease-in-out;
+  transform: rotate(-90deg);
+}
+
+.vertical-accordion-header:hover .vertical-accordion-arrow {
+  background-image: @arrow-right-blue-icon;
+}
+
+.vertical-accordion.active .vertical-accordion-arrow {
+  transform: rotate(90deg);
+}
+
+.go-back-icon-button {
+  height: 12px;
+  width: 12px;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-image: @x-grey;
+  padding: 0px;
+}
+
+.voting-progress-indicator {
+  > div {
+    height: 100%;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: -10px;
+    position: relative;
+  }
+
+  .voting-progress-yes {
+    background-color: var(--vote-yes-color);
+    z-index: 10;
+    min-width: 10px;
+  }
+
+  .voting-progress-no {
+    background-color: var(--vote-no-color);
+    z-index: 5;
+    min-width: 15px;
+  }
+
+  .voting-progress-abstain {
+    background-color: var(--vote-abstain-color);
+  }
+}
+
+.rebroadcast-button {
+  background-image: @rebroadcastTransaction;
+  background-position: 20px 12px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-left: 48px;
+  float: right;
+  margin-top: -22px;
+  margin-right: 68px;
+}

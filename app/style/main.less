@@ -1,0 +1,78 @@
+////////////////////////////////////
+//  Global variables
+////////////////////////////////////
+
+@sidebar-width: 296px;
+@sidebar-width-reduced: 60px;
+@disabled-box-shadow-color: rgba(0, 0, 0, 0.1);
+@disabled-box-shadow: 0px 1px 1px @disabled-box-shadow-color;
+
+@font-family-monospaced: "Inconsolata", monospace;
+@font-family-regular: "Source Sans Pro", sans-serif;
+
+@input-transition-time: 230ms;
+@input-timing-function: ease-in-out;
+
+////////////////////////////////////
+//  Global mixin classes
+////////////////////////////////////
+
+// Usage:
+//
+//  <div className="container">
+//      <div className="left">...</div>
+//      <div className="right">...</div>
+//  </div>
+//
+//  .container {
+//      .clearfloat-mixin;
+//  }
+//
+//  .left {
+//      float: left;
+//  }
+//  .right {
+//      float: right;
+//  }
+.clearfloat-mixin {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+// MixIn to be used on UI elements to be displayed side-by-side
+// Adds a minimial margin to the right for the spacing of the next element
+.inline-block-mixin {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+}
+
+////////////////////////////////////
+//  Global classes
+////////////////////////////////////
+
+.error {
+  color: var(--error-text-color);
+}
+
+.warning {
+  color: var(--error-text-color);
+}
+
+////////////////////////////////////
+//  Animation curvers
+////////////////////////////////////
+
+// Check out standard curves in http://easings.net
+@easeInOutQuart: cubic-bezier(0.77, 0, 0.175, 1);
+
+// Main scroll bar styling
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--disabled-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--disabled-color);
+}

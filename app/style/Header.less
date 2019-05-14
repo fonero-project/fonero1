@@ -1,0 +1,104 @@
+@import (reference) "./main.less";
+@import (reference) "./Icons.less";
+
+.header-small-balance {
+  display: inline;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 14px;
+  padding: 3px;
+  color: var(--input-color-default);
+  background-color: var(--blue-highlight-background);
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.header-get-started {
+  padding-right: 42px;
+  padding-left: 80px;
+  background-color: var(--disabled-background-color);
+}
+
+.header-top-get-started {
+  height: 34px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.header-title-overview-get-started {
+  height: 54px;
+  padding-top: 13px;
+  color: var(--background-back-color);
+  font-size: 27px;
+}
+
+.header-meta-overview-get-started {
+  height: 54px;
+  padding-top: 5px;
+  font-size: 18px;
+  color: var(--stroke-color-hovered);
+  font-family: Inconsolata, monospace;
+}
+
+.header-top {
+  text-align: center;
+}
+
+.header-title-overview {
+  padding-top: 14px;
+  color: var(--stroke-color-hovered);
+  font-size: 27px;
+}
+
+.header-meta-overview {
+  height: 54px;
+  padding-top: 5px;
+  font-size: 53px;
+}
+
+.title-header-icon > div {
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+
+  &.accounts { background-image: @header-accounts; }
+  &.help { background-image: @header-help; }
+  &.security { background-image: @header-security; }
+  &.settings { background-image: @header-settings; }
+  &.tickets { background-image: @header-tickets; }
+  &.transactions { background-image: @header-transactions; }
+  &.governance { background-image: @header-governance; }
+  &.trezor { background-image: @menu-trezor-active; }
+
+  &.tx-detail-icon-ticket { background-image: @ticket-live-icon; }
+  &.tx-detail-icon-vote { background-image: @ticket-voted-icon; }
+  &.tx-detail-icon-revocation { background-image: @ticket-revoked-icon; }
+  &.tx-detail-icon-transfer { background-image: @transfer-transaction; }
+
+  &.tx-detail-icon-out {
+    background-image: @minus-big-icon;
+  }
+
+  &.tx-detail-icon-in {
+    background-image: @plus-big-icon;
+  }
+}
+
+.mainnet {
+  float: left;
+  height: 20px;
+  width: 150px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: @logo;
+}
+
+.testnet {
+  height: 20px;
+  width: 150px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-image: @testnet-logo;
+}
