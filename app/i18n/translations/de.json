@@ -748,7 +748,7 @@
   "transactions.description.export": "Exportieren Sie verschiedene Statistiken aus Ihrem Wallet.",
   "transactions.description.history": "Gesamtguthaben: {totalBalance}",
   "transactions.description.receive": "Erstellen Sie zum Schutz Ihrer Privatsphäre bei jeder Zahlungsanfrage eine neue Adresse.",
-  "transactions.description.send.mainnet": "Mainnet-Fonero-Adressen beginnen immer mit dem Buchstaben D und umfassen 26-35 alphanumerische Zeichen\n(z. B. DxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X).",
+  "transactions.description.send.mainnet": "Mainnet-Fonero-Adressen beginnen immer mit dem Buchstaben F und umfassen 26-35 alphanumerische Zeichen\n(z. B. FxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X).",
   "transactions.description.send.testnet": "Testnet-Fonero-Adressen beginnen immer mit dem Buchstaben T und umfassen 26-35 alphanumerische Zeichen\n(z. B. TxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0).",
   "transactions.sortby.tooltip": "Sortieren nach",
   "transactions.tab.export": "Exportieren",

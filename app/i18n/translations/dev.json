@@ -748,7 +748,7 @@
   "transactions.description.export": "Exportar estatísticas.",
   "transactions.description.history": "Saldo total:",
   "transactions.description.receive": "Cada vez que requerer, crie um novo ende.",
-  "transactions.description.send.mainnet": "Endereços mainnet\n(e.g. DxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X).",
+  "transactions.description.send.mainnet": "Endereços mainnet\n(e.g. FxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X).",
   "transactions.description.send.testnet": "Endereços testnet\n(e.g. TxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0).",
   "transactions.sortby.tooltip": "Orenar por",
   "transactions.tab.export": "Exportar",

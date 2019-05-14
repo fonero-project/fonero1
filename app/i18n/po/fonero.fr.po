@@ -2855,17 +2855,17 @@ msgstr "Mainnet"
 
 #. [transactions.description.send.mainnet]
 #. defaultMessage is:
-#. Mainnet Fonero addresses always begin with letter D and contain 26-35
+#. Mainnet Fonero addresses always begin with letter F and contain 26-35
 #. alphanumeric characters
-#. (e.g. DxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X).
+#. (e.g. FxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X).
 #: app/i18n/extracted/app/components/views/TransactionsPage/SendTab/index.json
 msgctxt "transactions.description.send.mainnet"
 msgid ""
-"Mainnet Fonero addresses always begin with letter D and contain 26-35 alphanumeric characters\n"
-"(e.g. DxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X)."
+"Mainnet Fonero addresses always begin with letter F and contain 26-35 alphanumeric characters\n"
+"(e.g. FxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X)."
 msgstr ""
-"Les adresses Mainnet Fonero commencent toujours par la lettre D et comportent entre 26 et 35 caractères alphanumériques\n"
-"(par exemple, DxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X)."
+"Les adresses Mainnet Fonero commencent toujours par la lettre F et comportent entre 26 et 35 caractères alphanumériques\n"
+"(par exemple, FxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X)."
 
 #. [purchaseTickets.import]
 #. defaultMessage is:
