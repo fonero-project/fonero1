@@ -14,9 +14,9 @@ export const LinksTab = () => (
     <div className="tabbed-page-subtitle"><T id="help.subtitle.project" m="Project Related"/></div>
     <div className="help-icons-list">
       <HelpLink className={"help-github-icon"} href="https://github.com/fonero-project/fonero" title={<T id="help.github.title" m="Github"/>} subtitle={<T id="help.github.subtitle" m="github.com/fonero-project/fonero"/>} />
-      <HelpLink className={"help-docs-icon"} href="https://docs.fonero.org/" title={<T id="help.documentation" m="Documentation" />} subtitle={<T id="help.documentation.subtitle" m="docs.fonero.org"/>}/>
+      <HelpLink className={"help-docs-icon"} href="https://docs.fonero.org" title={<T id="help.documentation" m="Documentation" />} subtitle={<T id="help.documentation.subtitle" m="docs.fonero.org"/>}/>
       <HelpLink className={"help-stakepools-icon"} href="https://fonero.org/stakepools" title={<T id="help.stakepools" m=" Stakepools" />} subtitle={<T id="help.stakepools.subtitle" m="fonero.org/stakepools"/>}/>
-      <HelpLink className={"help-blockchain-explorer-icon"} href="https://explorer.fnodata.org" title={<T id="help.blockchain" m=" Blockchain Explorer" />} subtitle={<T id="help.blockchain.subtitle" m="explorer.fnodata.org"/>}/>
+      <HelpLink className={"help-blockchain-explorer-icon"} href="https://explorer.fonero.org" title={<T id="help.blockchain" m=" Blockchain Explorer" />} subtitle={<T id="help.blockchain.subtitle" m="explorer.fonero.org"/>}/>
       <HelpLinkInfoModal className={"help-constitution-icon"}
         title={<T id="help.constitution" m="Constitution"/>}
         subtitle={<T id="help.constitution.subtitle" m="Fonero Project Constitution"/>}
@@ -31,11 +31,12 @@ export const LinksTab = () => (
     </div>
     <div className="tabbed-page-subtitle"><T id="help.subtitle.communications" m="Communications"/></div>
     <div className="help-icons-list">
-      <HelpLink className={"help-slack-icon"} href="https://slack.fonero.org" title={<T id="help.slack" m="Slack" />} subtitle={<T id="help.slack.subtitle" m="slack.fonero.org"/>}/>
-      <HelpLink className={"help-rocketchat-icon"} href="https://rocketchat.fonero.org" title={<T id="help.rocketchat" m="RocketChat" />} subtitle={<T id="help.rocketchat.subtitle" m="rocketchat.fonero.org"/>}/>
-      <HelpLink className={"help-matrix-icon"} href="https://riot.im/app/#/login" title={<T id="help.matrix" m="Matrix Chat" />} subtitle={<T id="help.matrix.subtitle" m="riot.im"/>}/>
-      <HelpLink className={"help-forum-icon"} href="https://t.me/fonero" title={<T id="help.telegram" m="Telegram" />} subtitle={<T id="help.telegram.subtitle" m="t.me/fonero"/>}/>
-      <HelpLink className={"help-forum-icon"} href="https://forum.fonero.org" title={<T id="help.forum" m="Forum" />} subtitle={<T id="help.forum.subtitle" m="forum.fonero.org"/>}/>
+      <HelpLink className={"help-forum-icon"} href="https://bitcointalk.org/index.php?topic=4887643" title={<T id="help.forum" m="Bitcointalk ANN" />} subtitle={<T id="help.forum.subtitle" m="bitcointalk.org/index.php?..."/>}/>
+      <HelpLink className={"help-discord-icon"} href="https://discordapp.com/invite/AUc79Gk" title={<T id="help.discord" m="Bitcointalk ANN" />} subtitle={<T id="help.discord.subtitle" m="discordapp.com/invite/AUc79Gk"/>}/>
+      <HelpLink className={"help-telegram-icon"} href="https://t.me/fonero_en" title={<T id="help.telegram_en" m="Telegram EN" />} subtitle={<T id="help.telegram_en.subtitle" m="t.me/fonero_en"/>}/>
+      <HelpLink className={"help-telegram-icon"} href="https://t.me/fonero_ru" title={<T id="help.telegram_ru" m="Telegram RU" />} subtitle={<T id="help.telegram_ru.subtitle" m="t.me/fonero_ru"/>}/>
+      <HelpLink className={"help-telegram-icon"} href="https://t.me/fonero_asia" title={<T id="help.telegram_ch" m="Telegram CH" />} subtitle={<T id="help.telegram_ch.subtitle" m="t.me/fonero_asia"/>}/>
+      <HelpLink className={"help-telegram-icon"} href="https://t.me/fonero_esp" title={<T id="help.telegram_es" m="Telegram ES" />} subtitle={<T id="help.telegram_es.subtitle" m="t.me/fonero_esp"/>}/>
     </div>
   </Aux>
 );

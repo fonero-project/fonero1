@@ -13,7 +13,7 @@ export const SendTabHeader = service(({ isTestNet }) =>
   <DescriptionHeader
     description={isTestNet
       ? <T id="transactions.description.send.testnet" m={"Testnet Fonero addresses always begin with letter T and contain 26-35 alphanumeric characters\n(e.g. TxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0)."} />
-      : <T id="transactions.description.send.mainnet" m={"Mainnet Fonero addresses always begin with letter D and contain 26-35 alphanumeric characters\n(e.g. DxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X)."} />}
+      : <T id="transactions.description.send.mainnet" m={"Mainnet Fonero addresses always begin with letter F and contain 26-35 alphanumeric characters\n(e.g. FxxXXXXXxXXXxXXXXxxx0XxXXXxxXxXxX0X)."} />}
   />);
 
 @autobind
