@@ -95,7 +95,7 @@ export const allowExternalRequest = (externalReqType) => {
     addAllowedURL(/^https:\/\/api\.fonero\.org\/\?c=gsd$/);
     break;
   case EXTERNALREQUEST_UPDATE_CHECK:
-    addAllowedURL("https://api.github.com/repos/fonero/fonero/releases");
+    addAllowedURL("https://api.github.com/repos/fonero-project/fonero/releases");
     break;
   case EXTERNALREQUEST_POLITEIA:
     addAllowedURL(POLITEIA_URL_TESTNET);

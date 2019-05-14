@@ -51,7 +51,7 @@ export const NETWORK_MATCH = "NETWORK_MATCH";
 
 export const checkFoneroVersion = () => (dispatch, getState) =>{
   const detectedVersion = getState().daemon.appVersion;
-  const releaseApiURL = "https://api.github.com/repos/fonero/fonero/releases";
+  const releaseApiURL = "https://api.github.com/repos/fonero-project/fonero/releases";
   axios.get(releaseApiURL, { timeout: 5000 })
     .then(function (response) {
       const currentVersion = response.data[0].tag_name.split("v")[1];
