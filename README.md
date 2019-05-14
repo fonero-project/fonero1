@@ -14,7 +14,7 @@ already be using at this time.
 Download the fonero release for your operating system on [fonero/fonero-binaries](https://github.com/fonero-project/fonero-binaries/releases).
 
 On macOS, Ubuntu (14.04 LTS kernel 3.16 and later), and recent Debians, there should be
-no additional dependencies needed (exception: Ubuntu 18.04+, see [issue #1404](https://github.com/decred/decredition/issues/1404)).
+no additional dependencies needed (exception: Ubuntu 18.04+, see [issue #1404](https://github.com/decred/decrediton/issues/1404)).
 
 On Fedora or similar distros you may need to install the libXScrnSaver
 package if you see this error:
