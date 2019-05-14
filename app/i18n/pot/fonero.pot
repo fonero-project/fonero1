@@ -162,9 +162,9 @@ msgstr ""
 #: app/i18n/extracted/app/components/views/SettingsPage/PrivacySettings.json
 #. [settings.privacy.fnodata.description]
 #. defaultMessage is:
-#. Access chain information from explorer.fnodata.org
+#. Access chain information from explorer.fonero.org
 msgctxt "settings.privacy.fnodata.description"
-msgid "Access chain information from explorer.fnodata.org"
+msgid "Access chain information from explorer.fonero.org"
 msgstr ""
 
 #: app/i18n/extracted/app/components/views/AccountsPage/Accounts/AccountRow/AccountDetails.json
@@ -6492,9 +6492,9 @@ msgstr ""
 #: app/i18n/extracted/app/components/views/HelpPage/LinksTab/index.json
 #. [help.blockchain.subtitle]
 #. defaultMessage is:
-#. explorer.fnodata.org
+#. explorer.fonero.org
 msgctxt "help.blockchain.subtitle"
-msgid "explorer.fnodata.org"
+msgid "explorer.fonero.org"
 msgstr ""
 
 #: app/i18n/extracted/app/components/views/HelpPage/LinksTab/index.json

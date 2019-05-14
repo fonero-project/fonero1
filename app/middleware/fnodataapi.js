@@ -1,8 +1,8 @@
 // @flow
 import axios from "axios";
 
-export const FNODATA_URL_TESTNET = "https://testnet.fnodata.org/api";
-export const FNODATA_URL_MAINNET = "https://explorer.fnodata.org/api";
+export const FNODATA_URL_TESTNET = "https://testnet.fonero.org/api";
+export const FNODATA_URL_MAINNET = "https://explorer.fonero.org/api";
 
 const GET = (path) => {
   return axios.get(path);

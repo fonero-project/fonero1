@@ -175,11 +175,11 @@ msgstr "Accepter"
 
 #. [settings.privacy.fnodata.description]
 #. defaultMessage is:
-#. Access chain information from explorer.fnodata.org
+#. Access chain information from explorer.fonero.org
 #: app/i18n/extracted/app/components/views/SettingsPage/PrivacySettings.json
 msgctxt "settings.privacy.fnodata.description"
-msgid "Access chain information from explorer.fnodata.org"
-msgstr "Accéder aux informations de chaînes d’explorer.fnodata.org"
+msgid "Access chain information from explorer.fonero.org"
+msgstr "Accéder aux informations de chaînes d’explorer.fonero.org"
 
 #. [accounts.number]
 #. defaultMessage is:
@@ -6906,11 +6906,11 @@ msgstr "expiré"
 
 #. [help.blockchain.subtitle]
 #. defaultMessage is:
-#. explorer.fnodata.org
+#. explorer.fonero.org
 #: app/i18n/extracted/app/components/views/HelpPage/LinksTab/index.json
 msgctxt "help.blockchain.subtitle"
-msgid "explorer.fnodata.org"
-msgstr "explorer.fnodata.org"
+msgid "explorer.fonero.org"
+msgstr "explorer.fonero.org"
 
 #. [help.forum.subtitle]
 #. defaultMessage is:

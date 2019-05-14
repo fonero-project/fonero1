@@ -71,7 +71,7 @@ const PrivacySettings = ({
         <AllowableRequestType
           label={<T id="settings.privacy.fnodata.label" m="Fonero Block Explorer" />}
           id="fnodata"
-          description={<T id="settings.privacy.fnodata.description" m="Access chain information from explorer.fnodata.org" />}
+          description={<T id="settings.privacy.fnodata.description" m="Access chain information from explorer.fonero.org" />}
           checked={tempSettings.allowedExternalRequests.indexOf(EXTERNALREQUEST_FNODATA) > -1}
           onChange={toggle(EXTERNALREQUEST_FNODATA)}
         />
